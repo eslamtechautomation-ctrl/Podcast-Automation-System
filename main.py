@@ -25,7 +25,7 @@ def cleanup_old_episodes(audio_dir, max_files=20):
 
 async def main():
     # الإعدادات الأساسية
-    BLOG_RSS = "https://familytvr.blogspot.com/feeds/posts/default?alt=rss"
+    BLOG_RSS = "https://luxuryestateguide.blogspot.com/feeds/posts/default?alt=rss"
     AUDIO_DIR = "audio"
     USERNAME = "eslamtechautomation-ctrl"
     REPO = "Podcast-Automation-System"
