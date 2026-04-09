@@ -18,11 +18,11 @@ def update_rss_file(post_data, audio_url, output_file="podcast.xml"):
     <atom:link href="https://eslamtechautomation-ctrl.github.io/Podcast-Automation-System/podcast.xml" rel="self" type="application/rss+xml" />
     <title>Family TVR Podcast</title>
     <link>https://familytvr.blogspot.com/</link>
-    <language>ar</language>
+    <language>en-us</language>
     <itunes:author>Family TVR</itunes:author>
     <itunes:owner>
         <itunes:name>Eslam Tech</itunes:name>
-        <itunes:email>{email}</itunes:email>
+        <itunes:email>{eslammosde@gmail.com}</itunes:email>
     </itunes:owner>
     <itunes:image href="{cover_image}" />
     <description>تحويل آلي لمقالات مدونة Family TVR إلى بودكاست صوتي</description>
