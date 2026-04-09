@@ -22,7 +22,7 @@ def update_rss_file(post_data, audio_url, output_file="podcast.xml"):
     <itunes:author>Family TVR</itunes:author>
     <itunes:owner>
         <itunes:name>Eslam Tech</itunes:name>
-        <itunes:email>{eslammosde@gmail.com}</itunes:email>
+        <itunes:email>{email}</itunes:email>
     </itunes:owner>
     <itunes:image href="{cover_image}" />
     <description>تحويل آلي لمقالات مدونة Family TVR إلى بودكاست صوتي</description>
