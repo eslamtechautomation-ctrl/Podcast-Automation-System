@@ -1,8 +1,14 @@
+from src.utils import format_date_to_rfc822, clean_description_text
+
 def update_rss_file(post_data, audio_url, output_file="podcast.xml"):
     email = "eslammosde@gmail.com"
-    # رابط الصورة في مستودعك
+    # هذا هو الرابط المباشر (Raw) للصورة التي أرسلتها
     cover_image = "https://raw.githubusercontent.com/eslamtechautomation-ctrl/Podcast-Automation-System/main/assets/cover.jpg"
     
+    # تنظيف وتنسيق البيانات قبل وضعها في الـ RSS
+    clean_desc = clean_description_text(post_data['full_description'])
+    formatted_date = format_date_to_rfc822(post_data['pub_date'])
+
     rss_template = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" 
     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
@@ -25,8 +31,8 @@ def update_rss_file(post_data, audio_url, output_file="podcast.xml"):
     <item>
       <title>{post_data['title']}</title>
       <itunes:title>{post_data['title']}</itunes:title>
-      <description><![CDATA[{post_data['full_description']}]]></description>
-      <pubDate>{post_data['pub_date']}</pubDate>
+      <description><![CDATA[{clean_desc}]]></description>
+      <pubDate>{formatted_date}</pubDate>
       <enclosure url="{audio_url}" type="audio/mpeg" length="1024" />
       <guid isPermaLink="false">{post_data['id']}</guid>
       <itunes:author>Family TVR</itunes:author>
